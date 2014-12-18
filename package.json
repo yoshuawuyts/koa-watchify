@@ -1,0 +1,34 @@
+{
+  "name": "koa-watchify",
+  "version": "1.0.0",
+  "description": "Wraps a browserify or watchify instance into a koa middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --harmony test"
+  },
+  "repository": "yoshuawuyts/koa-watchify",
+  "keywords": [
+    "koa",
+    "browserify",
+    "watchify",
+    "composable"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^1.1.2",
+    "debug": "^2.1.0",
+    "watchify-request": "^2.0.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.5",
+    "koa": "^0.14.0",
+    "make-lint": "^1.0.1",
+    "servertest": "^1.1.1",
+    "tape": "^3.0.3"
+  },
+  "files": [
+    "LICENSE",
+    "index.js",
+    "README.md"
+  ]
+}
