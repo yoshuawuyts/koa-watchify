@@ -16,8 +16,8 @@ module.exports = kw
  * @return {GeneratorFunction}
  */
 function kw(bundler) {
+  var handler = wreq(bundler)
   return function *watchifyRequest(next) {
-    var handler = wreq(bundler)
     handler(this.req, this.res, function(err, body) {
       if (err) this.throw(err)
       next()
