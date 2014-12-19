@@ -27,7 +27,7 @@ var bundle = browserify({
   cache: {}
 })
 
-if ('production' == process.env.NODE_ENV) bundle = watchify(bundle)
+if ('development' == process.env.NODE_ENV) bundle = watchify(bundle)
 
 app.use(wreq(bundle))
 app.listen(process.env.port || 1337)
