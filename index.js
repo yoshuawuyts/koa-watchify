@@ -10,12 +10,14 @@ var assert = require('assert')
 module.exports = kw
 
 /**
- * Wrap `watchify request` in koa middleware.
+ * Wrap `watchify-request` in koa middleware.
  *
  * @param {Function} bundler
  * @return {GeneratorFunction}
+ * @api public
  */
 function kw(bundler) {
+  assert(typeof bundler, 'function')
   var handler = wreq(bundler)
   return function *watchifyRequest(next) {
     handler(this.req, this.res, function(err, body) {

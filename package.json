@@ -11,7 +11,7 @@
     "koa",
     "browserify",
     "watchify",
-    "composable"
+    "compose"
   ],
   "license": "MIT",
   "dependencies": {
