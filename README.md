@@ -44,6 +44,7 @@ running `koa` and `browserify`. No `gulp`, `grunt` or `make` needed.
 
 ## See Also
 - [watchify-request][watchify-request]
+- [myth-request][myth-request]
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
@@ -60,3 +61,4 @@ running `koa` and `browserify`. No `gulp`, `grunt` or `make` needed.
 [browserify]: http://github.com/substack/node-browserify
 [watchify]: http://ghub.io/watchify
 [watchify-request]: https://github.com/hughsk/watchify-request
+[myth-request]: https://github.com/yoshuawuyts/myth-request
