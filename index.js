@@ -1,20 +1,19 @@
-
-var wreq   = require('watchify-request')
-var assert = require('assert')
+const wreq = require('watchify-request')
+const assert = require('assert')
 
 module.exports = kw
 
 // Wrap `watchify-request` in koa middleware.
-// @param  {Function} bundler
-// @return {GeneratorFunction}
+// @param {Function} bundler
+// @return {Function*}
 // @api public
 function kw(bundler) {
-  assert(typeof bundler, 'function')
+  assert.equal(typeof bundler, 'function')
   var handler = wreq(bundler)
   return function *watchifyRequest(next) {
-    handler(this.req, this.res, function(err, body) {
-      if (err) this.throw(err)
-      this.response.body = body
-    }.bind(this))
+    const res = yield handler.bind(handler, this.req, this.res)
+    if (res[0]) this.throw(err)
+    this.response.body = res[1]
+    yield next
   }
 }
