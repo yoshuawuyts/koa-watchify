@@ -1,7 +1,6 @@
 # koa-watchify
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
 [![Downloads][downloads-image]][downloads-url]
 
 Wraps a [browserify][browserify] or [watchify][watchify] instance into a
